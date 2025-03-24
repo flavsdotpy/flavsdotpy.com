@@ -372,4 +372,39 @@ input:checked + .slider:before {
 .ls-output {
     font-family: monospace;
     margin-bottom: 1rem;
+}
+
+.command.clickable {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.command.clickable:hover {
+    color: var(--primary-color);
+}
+
+.markdown-links {
+    font-family: 'Courier New', monospace;
+    color: #00ff00;
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    line-height: 1.5;
+}
+
+.markdown-links h1 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.markdown-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.markdown-links a:hover {
+    color: var(--primary-color);
 } 
