@@ -1,0 +1,223 @@
+:root {
+    --primary-color: #00ff00;
+    --background-color: #0a0a0a;
+    --text-color: #ffffff;
+    --accent-color: #ff00ff;
+    --terminal-bg: #1a1a1a;
+    --terminal-border: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.terminal {
+    background-color: var(--terminal-bg);
+    border: 1px solid var(--terminal-border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+.terminal-header {
+    background-color: var(--terminal-border);
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.terminal-title {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.terminal-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.close { background-color: #ff5f56; }
+.minimize { background-color: #ffbd2e; }
+.maximize { background-color: #27c93f; }
+
+.terminal-content {
+    padding: 2rem;
+}
+
+.command-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.prompt {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.command {
+    color: var(--text-color);
+}
+
+.output {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.ascii-art {
+    color: var(--primary-color);
+    font-size: 0.7rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    white-space: pre;
+    font-family: monospace;
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+.subtitle {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.social-link {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--primary-color);
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .terminal-content {
+        padding: 1rem;
+    }
+    
+    .ascii-art {
+        font-size: 0.5rem;
+    }
+}
+
+.project-card {
+    background-color: rgba(0, 255, 0, 0.05);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2);
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.project-title {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-title:hover {
+    color: var(--accent-color);
+}
+
+.project-card p {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.project-links {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--accent-color);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid var(--primary-color);
+} 
